@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/about', function () {
+    return "hello about page";
+});
+
+Route::get('/contacts', function () {
+    return "timt173@gmail.com";
+});
+
+Route::get('/post/{id}/{name}', function ($id, $name) {
+    return "welcome :" . $name . " " . $id;
+});
