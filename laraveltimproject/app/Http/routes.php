@@ -26,3 +26,15 @@ Route::get('/contacts', function () {
 Route::get('/post/{id}/{name}', function ($id, $name) {
     return "welcome :" . $name . " " . $id;
 });
+
+
+Route::get('/admin/posts/example', array('as'=>'admin.home', function(){
+	$url = route('admin.home');
+
+	return "this url is : ". $url;
+
+}));
+
+
+//Route::get('/post/{id}', 'PostController@index');
+Route::resource('posts', 'PostController');
