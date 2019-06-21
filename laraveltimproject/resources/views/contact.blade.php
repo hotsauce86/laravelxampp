@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Laravel</title>
+        <title>Laravel contact blade</title>
 
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
 
@@ -38,8 +38,11 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Laravel 5</div>
-                <p>(this is the welcome blade)</p>
+                <div class="title">contact blade</div>
+                <p>timt173@gmail.com</p>
+                <p>401-714-7761</p>
+                <p>https://www.linkedin.com/in/tim-tierney-forhire12345/</p>
+                <p>https://github.com/hotsauce86</p>
             </div>
         </div>
     </body>
