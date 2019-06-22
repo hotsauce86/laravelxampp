@@ -1,4 +1,4 @@
-<!--DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <title>Laravel contact blade</title>
@@ -38,18 +38,11 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">contact blade</div>
+                <div class="title">post blade {{$id}}{{$name}} {{$password}}</div>
                 <p>timt173@gmail.com</p>
-                <p>401-714-7761</p>
-                <p>https://www.linkedin.com/in/tim-tierney-forhire12345/</p>
-                <p>https://github.com/hotsauce86</p>
+
+               
             </div>
         </div>
     </body>
-</html-->
-
-@extends('layouts.test')
-
-@section('content')
-
-@stop
+</html>
