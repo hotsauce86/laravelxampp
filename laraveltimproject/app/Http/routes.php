@@ -48,3 +48,8 @@ Route::get('/contact', 'PostController@contact');
 Route::get('/post/{id}/{name}/{password}', 'PostController@show_post');
 
 
+Route::get('/about', function (){
+		return view('about');
+});
+
+

@@ -40,6 +40,18 @@
             <div class="content">
                 <div class="title">Laravel 5</div>
                 <p>(this is the welcome blade)</p>
+
+                <p>
+                    <a href="/contact">Contact</a> us to learn more
+                </p>
+
+                <p>
+                    <a href="/post/12/23/34">Posts</a>
+                </p>
+
+                <p>
+                    <a href="/testlayout">testlayout</a>    
+                </p>
             </div>
         </div>
     </body>
