@@ -40,5 +40,9 @@ class PostController extends Controller
 		return view('post', compact('id', 'name', 'password'));
 	}
 
+	public function about(){
+		return view('about');
+	}
+
 }
 
