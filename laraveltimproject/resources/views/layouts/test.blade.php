@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UFT-8">
-	<title>Document</title>
+	<title>@yield('title')</title>
 
 	<!--  im a  comment in the test layout page -->
 </head>

@@ -1,5 +1,8 @@
 <?php
 
+
+use App\Post;
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -67,6 +70,59 @@ Route::get('/contact', 'PostController@contact');
 Route::get('/about', 'PostController@about');
 
 Route::get('/post/{id}/{name}/{password}', 'PostController@show_post');
+
+//Route::get('/read', 'PostController@read_post');
+Route::get('/read', function(){
+	$results = DB::select('select * from posts where id = ?', [2]);
+	foreach ($results as $post) {
+		return $post->title;
+	}
+	
+});
+
+
+Route::get('/find', function(){
+
+
+	$posts = Post::all();
+	foreach ($posts as $post) {
+		# code...
+		return $post->title;
+	}
+
+
+	// $posts = Post::where('id',3)->orderBy('id', 'desc')->take(1)-get();
+	// return $posts;
+
+	// $posts = Post::findOrFail(2);
+	// return $posts;
+
+	// $posts = Post::where('users_count', '<', 50)->firstOrFail();
+
+
+
+});
+
+
+Route::get('/basicinsert', function(){
+
+	#adds to table 'Post'
+	// $post = new Post;
+	// $post->title = 'New title insert1';
+	// $post->body ='awesome this is so cool wow 5 stars thumbs up errebody!';
+	// $post->save;
+
+
+	#updates values of object at id 2 in 'Post' Table
+	$post = Post::find(2);
+	$post->title = 'New title insert1';
+	$post->body ='awesome this is so cool wow 5 stars thumbs up errebody!';
+	$post->save();
+
+
+});
+
+
 
 
 // Route::get('/about', function (){
