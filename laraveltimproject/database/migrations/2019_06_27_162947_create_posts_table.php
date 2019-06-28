@@ -15,6 +15,9 @@ class CreatePostsTable extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
+
+
+            $table->softDeletes();
         });
     }
 
@@ -26,5 +29,12 @@ class CreatePostsTable extends Migration
     public function down()
     {
         Schema::drop('posts');
+
+
+        // Schema::table('posts', function (Blueprint $table){
+        //         $table->dropColumb('detete_at');
+        // });
+
+
     }
 }

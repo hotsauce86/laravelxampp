@@ -123,6 +123,31 @@ Route::get('/basicinsert', function(){
 });
 
 
+Route::get('/create', function(){
+	#uses Post.php Protected Fillable to allow writing
+	// Post::create(['title'=>'the create method', 'body'=>'some blah blah blanc ah oui oui ez enerph?']);
+});
+
+Route::get('/update', function(){
+		// Post::where('id', 2)->where('is_admin', 0)->update(['title
+		// 	'=>'NEW PHP TITLE', 'content'=>'iluvdogsorwhatever']);
+});
+
+
+Route::get('/delete', function(){
+	// $post = Post::find(1);
+	// $post->delete();
+	// Post::destroy(1);
+	// Post::destroy([4,5]);
+	// Post::where('is_admin', 0)->delete();
+
+})
+
+
+Route::get('/softdelete', function(){
+ 	
+});
+
 
 
 // Route::get('/about', function (){
