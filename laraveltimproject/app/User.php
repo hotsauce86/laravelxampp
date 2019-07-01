@@ -29,7 +29,7 @@ class User extends Authenticatable
 
         //return $this->hasOne('App\Post');
 
-        //return $this->hasOne('App\Post', 'user_id');
+        return $this->hasOne('App\Post', 'user_id');
 
     }
 }

@@ -183,3 +183,7 @@ Route::get('/forcedelete', function(){
 	});
 	
 
+	Route::get('/tim', function(){
+		return view('tim');
+	});
+
