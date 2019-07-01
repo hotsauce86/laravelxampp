@@ -32,6 +32,23 @@
 			echo "neat thanks sublime";
 			break;
 	}
+
+	$whilecount =0;
+	while($whilecount < 3){
+		echo "<br>";
+		echo $whilecount;
+		$whilecount++;
+	}
+
+	for($forcount =3; $forcount > 0 ; $forcount--){
+		echo "<br>";
+		echo $forcount;
+	}
+	echo "<br><br>";
+	$foreachcount = array(123,2344,435,6456,76678,2345);
+	foreach($foreachcount as $fec){
+		echo "hello, " . $fec . "<br>";
+	}
 	?>
 
 </body>
