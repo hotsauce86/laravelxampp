@@ -51,5 +51,22 @@
 	}
 	?>
 
+
+
+
+
+	<?php
+
+	
+		function somefunction($sc){
+			// while($sc < 4){
+			echo "testing function, typing on this keyboard is hard: " . $sc ."<br><br>";	
+				
+			// }
+			
+		}
+
+		somefunction(1);
+	?>
 </body>
 </html>
