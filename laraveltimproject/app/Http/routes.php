@@ -2,6 +2,7 @@
 
 
 use App\Post;
+use App\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -141,7 +142,7 @@ Route::get('/delete', function(){
 	// Post::destroy([4,5]);
 	// Post::where('is_admin', 0)->delete();
 
-})
+});
 
 
 Route::get('/softdelete', function(){
@@ -157,12 +158,12 @@ Route::get('/softdelete', function(){
 
 Route::get('/restore', function(){
 	//Post::withTrashed()->where('is_admin', 0)->restore();
-})
+});
 
 
 Route::get('/forcedelete', function(){
 	//Post::withTrashed()->where('is_admin', 0)->forceDelete();
-})
+});
 
 
 
@@ -170,4 +171,15 @@ Route::get('/forcedelete', function(){
 // 		return view('about');
 // });
 
+
+
+/*
+	eloquent relationships
+*/
+
+
+	Route::get('/user/post/{id}', function($id){
+		return User::find($id)->post;
+	});
+	
 
