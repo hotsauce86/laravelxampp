@@ -1,9 +1,29 @@
 <!DOCTYPE html>
+<?php
+	
+	if(isset($_POST['submit'])){
+		echo "data has been submitted";
+
+
+		$username = $_POST['username'];
+		$password = $_POST['password'];
+	}
+
+
+ ?>
 <html>
 <head>
 	<title>Tim</title>
 </head>
 <body>
+
+	<style>
+		article{
+			background-color: lightgrey;
+			border-style: solid;
+			border-color: black 1px;
+		}
+	</style>
 	<p>Hello, if youy are seeing this page on Git, I'll just let you know that this place is just a scratchpad for me to practice some PHP stuff.</p>
 
 
@@ -109,12 +129,35 @@
 
 		function arrayStuff(){
 
+			$num = 56;
 			$list = [123,342,56,123,78,45,345,67,34,56];
 
 			echo max($list) . "<br>";
 			echo min($list) . "<br>";
 
+			$find = in_array($num, $list);
+
+			if($find){
+				echo "found";
+			}else{
+				echo "not found";
+			}
+
 		}
+		arrayStuff();
 	?>
+
+
+	<article>
+		<p>In the following section we will have a form</p>
+	</article>
+
+
+	<form action="tim.blade.php" method="post">
+		<input type="text" placeholder="Enter Username">
+		<input type="text" placeholder="Enter Password">
+		<br>
+		<input type="submit" name="submit">
+	</form>
 </body>
 </html>
