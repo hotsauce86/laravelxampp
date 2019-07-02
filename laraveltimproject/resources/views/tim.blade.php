@@ -67,6 +67,22 @@
 		}
 
 		somefunction(1);
+
+		$count =0;
+
+		function testrecurstion($count){
+			echo($count);
+			while($count < 7){
+				//echo($count);
+				$count++;
+				return testrecurstion($count);
+			}
+			echo($count);
+			return $count;
+		}
+
+
+		testrecurstion($count);
 	?>
 </body>
 </html>
