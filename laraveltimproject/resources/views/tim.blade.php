@@ -83,6 +83,38 @@
 
 
 		testrecurstion($count);
+
+
+
+		function mathStuff(){
+
+			echo rand(1, 1000) . "<br>";
+
+			echo pow(2,5) . "<br>";
+
+			echo sqrt(100) . "<br>";
+
+		}
+		mathStuff();
+
+		function stringStuff(){
+			$somestring = "hello im a lorem ipsum thing";
+
+			echo strlen($somestring) .  "<br>";
+			echo strtoupper($somestring) .  "<br>";
+			echo strtolower($somestring) .  "<br>";
+		}
+		stringStuff();
+
+
+		function arrayStuff(){
+
+			$list = [123,342,56,123,78,45,345,67,34,56];
+
+			echo max($list) . "<br>";
+			echo min($list) . "<br>";
+
+		}
 	?>
 </body>
 </html>
