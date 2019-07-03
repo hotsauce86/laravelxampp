@@ -37,14 +37,17 @@
 
             @keyframes fontbulger{
                 0%{
-                    font-size: 72px
+                    font-size: 384px
+                    color: white;
                 }
 
                 1%{
-                    font-size: 128px;
+                    font-size: 192px;
+                    color: white;
                 }
                 10%{
-                    font-size: 96px;
+                    font-size: 128px;
+                    color: black;
                 }
                 100%{
                     font-size: 96px;
@@ -61,21 +64,34 @@
                 2%{
                     background-color: red;
                 }
-                3%{
-                    background-color: teal;
+                 3%{
+                    background-color: black;
                 }
                 4%{
+                    background-color: teal;
+                }
+                 5%{
+                    background-color: black;
+                }
+                6%{
                     background-color: yellow;
                 }
-                5%{
+                7%{
+                    background-color: black;
+                }
+                8%{
                     background-color: pink;
                 }
+                9%{
+                    background-color: black;
+                }
                 10%{
-                    background-color: white;
+                    background-color: lightgrey;
                 }
                 100%{
                     background-color: white;
                 }
+                
             }
 
             .title{
