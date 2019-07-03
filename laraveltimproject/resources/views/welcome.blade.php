@@ -33,12 +33,65 @@
             .title {
                 font-size: 96px;
             }
+
+
+            @keyframes fontbulger{
+                0%{
+                    font-size: 72px
+                }
+
+                1%{
+                    font-size: 128px;
+                }
+                10%{
+                    font-size: 96px;
+                }
+                100%{
+                    font-size: 96px;
+                }
+            }
+
+            @keyframes backgroundshifter{
+                0%{
+                    background-color: white;
+                }
+                1%{
+                    background-color: black;
+                }
+                2%{
+                    background-color: red;
+                }
+                3%{
+                    background-color: teal;
+                }
+                4%{
+                    background-color: yellow;
+                }
+                5%{
+                    background-color: pink;
+                }
+                10%{
+                    background-color: white;
+                }
+                100%{
+                    background-color: white;
+                }
+            }
+
+            .title{
+                animation: fontbulger 10s;
+            }
+
+            body{
+                animation: backgroundshifter 10s;
+            }
         </style>
     </head>
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Laravel 5</div>
+                <!--div class="title">Laravel 5</div-->
+                <div class="title">TIM'S LARAVEL PROJECT (V 0.4.2)</div>
                 <p>(this is the welcome blade)</p>
 
                 <p>

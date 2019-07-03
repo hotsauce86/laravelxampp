@@ -148,6 +148,18 @@
 	?>
 
 
+
+	<?php
+
+
+		echo "<br><br> Sorry, you are NOT allowed...";
+		
+		$lost = "i have no memory and I must SCREAM!!!";
+
+		echo $lost;
+	?>
+
+
 	<article>
 		<p>In the following section we will have a form</p>
 	</article>
