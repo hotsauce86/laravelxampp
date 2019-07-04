@@ -14,8 +14,8 @@ class CreateScoreboardTable extends Migration
     {
         Schema::create('scoreboard', function (Blueprint $table) {
             $table->increments('id');
-            $table->int('score_val');
-            $table->int('playerID');
+            $table->integer('score_val');
+            $table->integer('playerID');
             $table->timestamps();
         });
     }

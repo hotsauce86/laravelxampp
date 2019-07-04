@@ -49,6 +49,9 @@
                     font-size: 128px;
                     color: black;
                 }
+                30%{
+                    font-size: 96px;
+                }
                 100%{
                     font-size: 96px;
                 }
@@ -95,11 +98,11 @@
             }
 
             .title{
-                animation: fontbulger 10s;
+                animation: fontbulger 3s;
             }
 
             body{
-                animation: backgroundshifter 10s;
+                animation: backgroundshifter 3s;
             }
         </style>
     </head>
