@@ -3,6 +3,7 @@
 
 use App\Post;
 use App\User;
+use App\Score;
 
 /*
 |--------------------------------------------------------------------------
@@ -188,7 +189,11 @@ Route::get('/forcedelete', function(){
 	});
 
 
-	Route::get('/scoreboard', function(){
-		return view('scoreboard');
-	});
+	// Route::get('/scoreboard', function(){
+	// 	return view('scoreboard');
+	// });
+
+
+	Route::get('/scoreboard', 'ScoreboardController@retrieve_scores');
+
 
