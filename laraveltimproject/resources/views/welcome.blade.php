@@ -98,11 +98,11 @@
             }
 
             .title{
-                animation: fontbulger 3s;
+                animation: fontbulger 4s;
             }
 
             body{
-                animation: backgroundshifter 3s;
+                animation: backgroundshifter 4s;
             }
         </style>
     </head>

@@ -187,3 +187,8 @@ Route::get('/forcedelete', function(){
 		return view('tim');
 	});
 
+
+	Route::get('/scoreboard', function(){
+		return view('scoreboard');
+	});
+

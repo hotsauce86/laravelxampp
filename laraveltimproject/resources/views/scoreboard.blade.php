@@ -11,7 +11,7 @@
 	<form>
 		<input type="number" name="playerID" placeholder="PlayerID">
 		<input type="number" name="scoreValue" placeholder="Score">
-		<input type="submit" value="add score">
+		<input type="submit" name="search1" value="add score">
 	</form>
 
 
@@ -28,23 +28,13 @@
 		</tbody>
 	</table>
 
-	<?php
+	<!--?php
 
 
 	/*
 	most of what is in here now can only be described as code cobbled together with hotglue and staples. Most of what this connection is based off of is from my movie database project, and trying to find a way to rework it for this laravel project. take everything you see here with a grain of salt as this is not the final version
 
 	*/
-	
-	$servername = "localhost";
-	$username = "bobbar";
-	$password = "password";
-	$dbname = "bonfire";
-
-
-	$search_value1=$_POST["search1"];
-
-	$conn = new mysqli($servername, $username, $password, $dbname);
 
 
 	if ($conn->connect_error) {
@@ -52,7 +42,7 @@
    	echo "Connection failed:";
 	} else{
 	//We CONCAT the actors name for readability
-	$sql = "SELECT scoreVal, playerID AS Score, playerID
+	$sql = "SELECT scoreVal, playerID
 			FROM scoreboard
       ";
 	$result = $conn->query($sql);
@@ -64,7 +54,7 @@
 
 }
 
-	?>
+	?-->
 
 </body>
 </html>
