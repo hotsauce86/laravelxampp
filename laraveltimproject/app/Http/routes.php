@@ -130,6 +130,10 @@ Route::get('/create', function(){
 	// Post::create(['title'=>'the create method', 'body'=>'some blah blah blanc ah oui oui ez enerph?']);
 });
 
+Route::get('/insert', function(){
+	DB::insert('insert into posts(title, content) values(?,?)', ['Php with laravel', 'some stuff goes here but hwat']);
+});
+
 Route::get('/update', function(){
 		// Post::where('id', 2)->where('is_admin', 0)->update(['title
 		// 	'=>'NEW PHP TITLE', 'content'=>'iluvdogsorwhatever']);
