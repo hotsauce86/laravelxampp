@@ -49,18 +49,10 @@ Route::get('/', function () {
 
 
 
-
-
-
-
-
-
-
 /*
+|----------------------------------------------
 				ROUTES USING A CONTROLLER!!!
-
-
-
+|----------------------------------------------
 */
 
 //Route::get('/post/{id}', 'PostController@index');
@@ -68,7 +60,9 @@ Route::get('/', function () {
 
 Route::get('/contact', 'PostController@contact');
 
-
+// Route::get('/about', function (){
+// 		return view('about');
+// });
 Route::get('/about', 'PostController@about');
 
 Route::get('/post/{id}/{name}/{password}', 'PostController@show_post');
@@ -100,9 +94,6 @@ Route::get('/find', function(){
 	// return $posts;
 
 	// $posts = Post::where('users_count', '<', 50)->firstOrFail();
-
-
-
 });
 
 
@@ -172,25 +163,19 @@ Route::get('/forcedelete', function(){
 
 
 
-// Route::get('/about', function (){
-// 		return view('about');
-// });
 
 
 
 /*
-	eloquent relationships
+|---------------------------------------------
+	ELOQUENT relationships
+|---------------------------------------------
 */
-
 
 	Route::get('/user/post/{id}', function($id){
 		return User::find($id)->post;
 	});
 	
-
-	Route::get('/tim', function(){
-		return view('tim');
-	});
 
 
 	// Route::get('/scoreboard', function(){
@@ -198,6 +183,19 @@ Route::get('/forcedelete', function(){
 	// });
 
 
-	Route::get('/scoreboard', 'ScoreboardController@retrieve_scores');
 
+
+/*
+|---------------------------------------------
+	Specian projects
+|---------------------------------------------
+*/
+
+
+	Route::get('/tim', function(){
+		return view('tim');
+	});
+
+
+	Route::get('/scoreboard', 'ScoreboardController@retrieve_scores');
 
