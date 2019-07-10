@@ -160,6 +160,18 @@
 	?>
 
 
+	<form action="/tim" method="post">
+		<input type="submit" name="submit" value="SUBMIT">
+	</form>
+
+	<?php
+
+
+
+
+	?>
+
+
 	<article>
 		<p>In the following section we will have a form</p>
 	</article>
