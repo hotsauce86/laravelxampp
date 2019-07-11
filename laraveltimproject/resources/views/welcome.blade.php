@@ -109,6 +109,15 @@
     <body>
         <div class="container">
             <div class="content">
+
+
+                <?php
+                foreach($tasks as $task) :
+                ?>
+
+                <li><?= $task; ?></li>
+            <?php endforeach; ?>
+                
                 <!--div class="title">Laravel 5</div-->
                 <div class="title">TIM'S LARAVEL PROJECT (V 0.4.2)</div>
                 <p>(this is the welcome blade)</p>

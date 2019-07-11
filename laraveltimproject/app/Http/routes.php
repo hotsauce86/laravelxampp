@@ -17,7 +17,19 @@ use App\Score;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+
+	$tasks = [
+		'go to the store',
+		'get a loaf of bread',
+		'buy some milk',
+		'wait for snow'
+	];
+
+	return view ('welcome', [
+		'tasks' => $tasks
+	]);
+
+   // return view('welcome');
 });
 
 // Route::get('/about', function () {
@@ -123,6 +135,17 @@ Route::get('/create', function(){
 
 Route::get('/insert', function(){
 	DB::insert('insert into posts(title, content) values(?,?)', ['Php with laravel', 'some stuff goes here but hwat']);
+});
+
+Route::get('/quickfillposts', function(){
+	DB::insert('insert into posts(title, content) values(?,?)', ['Php with laravel', 'some stuff goes here but hwat']);
+	DB::insert('insert into posts(title, content) values(?,?)', ['Wubba lubba', ' dab dab']);
+	DB::insert('insert into posts(title, content) values(?,?)', ['who moved my cheese', 'is really good about teaching you organizational skills']);
+	DB::insert('insert into posts(title, content) values(?,?)', ['My day is ruined', 'Im wworking 8 hours a day and have little time for laravel :(']);
+	DB::insert('insert into posts(title, content) values(?,?)', ['Laravel test', 'filling the database with filler values']);
+	DB::insert('insert into posts(title, content) values(?,?)', ['I should use a insert generator for this', 'sbut hardcoding is simple']);
+	DB::insert('insert into posts(title, content) values(?,?)', ['ok, that should be', 'enough']);
+	DB::insert('insert into posts(title, content) values(?,?)', ['just in case it was not', 'enough']);
 });
 
 Route::get('/update', function(){
