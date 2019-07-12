@@ -16,21 +16,23 @@ use App\Score;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', 'PagesController@home');
 
-	$tasks = [
-		'go to the store',
-		'get a loaf of bread',
-		'buy some milk',
-		'wait for snow'
-	];
+// Route::get('/', function () {
 
-	return view ('welcome', [
-		'tasks' => $tasks
-	]);
+// 	$tasks = [
+// 		'go to the store',
+// 		'get a loaf of bread',
+// 		'buy some milk',
+// 		'wait for snow'
+// 	];
 
-   // return view('welcome');
-});
+// 	return view ('welcome', [
+// 		'tasks' => $tasks
+// 	]);
+
+//    #// return view('welcome');
+// });
 
 // Route::get('/about', function () {
 //     return "hello about page";
