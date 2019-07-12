@@ -45,8 +45,15 @@ class PostController extends Controller
 
 
 	public function read_post(){
-		$results = DB::select('select * from posts where id = ?', [2]);
-		return view('read', compact($results));
+		$results = \DB::select('select * from posts where id = ?', [2]);
+		//return view('read', compact($results));
+
+
+			// $results = DB::select('select * from posts where id = ?', [2]);
+			foreach ($results as $post) {
+				return $post->title;
+			}
+
 	}
 }
 

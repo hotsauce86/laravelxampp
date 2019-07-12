@@ -18,50 +18,6 @@ use App\Score;
 
 Route::get('/', 'PagesController@home');
 
-// Route::get('/', function () {
-
-// 	$tasks = [
-// 		'go to the store',
-// 		'get a loaf of bread',
-// 		'buy some milk',
-// 		'wait for snow'
-// 	];
-
-// 	return view ('welcome', [
-// 		'tasks' => $tasks
-// 	]);
-
-//    #// return view('welcome');
-// });
-
-// Route::get('/about', function () {
-//     return "hello about page";
-// });
-
-// Route::get('/contacts', function () {
-//     return "timt173@gmail.com";
-// });
-
-// Route::get('/post/{id}/{name}', function ($id, $name) {
-//     return "welcome :" . $name . " " . $id;
-// });
-
-
-// Route::get('/admin/posts/example', array('as'=>'admin.home', function(){
-// 	$url = route('admin.home');
-
-// 	return "this url is : ". $url;
-
-// }));
-
-// Route::get('/testlayout', function () {
-// 		return view('testlayout');
-// });
-
-
-
-
-
 
 /*
 |----------------------------------------------
@@ -74,21 +30,18 @@ Route::get('/', 'PagesController@home');
 
 Route::get('/contact', 'PostController@contact');
 
-// Route::get('/about', function (){
-// 		return view('about');
-// });
 Route::get('/about', 'PostController@about');
 
 Route::get('/post/{id}/{name}/{password}', 'PostController@show_post');
 
-//Route::get('/read', 'PostController@read_post');
-Route::get('/read', function(){
-	$results = DB::select('select * from posts where id = ?', [2]);
-	foreach ($results as $post) {
-		return $post->title;
-	}
+Route::get('/read', 'PostController@read_post');
+// Route::get('/read', function(){
+// 	$results = DB::select('select * from posts where id = ?', [2]);
+// 	foreach ($results as $post) {
+// 		return $post->title;
+// 	}
 	
-});
+// });
 
 
 Route::get('/find', function(){
