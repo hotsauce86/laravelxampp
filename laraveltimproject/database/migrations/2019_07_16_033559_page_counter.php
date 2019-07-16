@@ -13,6 +13,10 @@ class PageCounter extends Migration
     public function up()
     {
         //
+          Schema::create('Page_Counter', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('counter');
+        });
     }
 
     /**

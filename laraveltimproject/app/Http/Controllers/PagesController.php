@@ -25,4 +25,14 @@ class PagesController extends Controller
 			'tasks' => $tasks
 		]);
     }
+
+    public function create_page_counter(){
+    	\DB::insert('insert into page_counter(counter) values(?)', 0);
+    }
+
+    public function reset_page_counter(){
+    	$counter = 0;
+
+
+    }
 }

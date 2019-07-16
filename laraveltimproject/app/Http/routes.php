@@ -108,7 +108,6 @@ Route::get('/update', function(){
 		// 	'=>'NEW PHP TITLE', 'content'=>'iluvdogsorwhatever']);
 });
 
-
 Route::get('/delete', function(){
 	// $post = Post::find(1);
 	// $post->delete();
@@ -117,7 +116,6 @@ Route::get('/delete', function(){
 	// Post::where('is_admin', 0)->delete();
 
 });
-
 
 Route::get('/softdelete', function(){
  	
@@ -177,3 +175,4 @@ Route::get('/forcedelete', function(){
 
 	Route::get('/scoreboard', 'ScoreboardController@retrieve_scores');
 
+	Route::get('/createpagecounter', 'PagesController@create_page_counter');
