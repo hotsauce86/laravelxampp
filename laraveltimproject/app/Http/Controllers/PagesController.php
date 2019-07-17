@@ -30,9 +30,5 @@ class PagesController extends Controller
     	\DB::insert('insert into page_counter(counter) values(?)', 0);
     }
 
-    public function reset_page_counter(){
-    	$counter = 0;
-
-
-    }
+ 
 }

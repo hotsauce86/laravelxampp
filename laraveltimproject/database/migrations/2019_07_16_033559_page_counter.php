@@ -27,5 +27,6 @@ class PageCounter extends Migration
     public function down()
     {
         //
+        Schema::drop('Page_Counter');
     }
 }
