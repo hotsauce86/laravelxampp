@@ -176,3 +176,8 @@ Route::get('/forcedelete', function(){
 	Route::get('/scoreboard', 'ScoreboardController@retrieve_scores');
 
 	Route::get('/createpagecounter', 'PagesController@create_page_counter');
+
+
+	Route::get('/form', function(){
+		return view('form');
+	});
