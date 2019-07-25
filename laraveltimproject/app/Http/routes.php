@@ -178,6 +178,9 @@ Route::get('/forcedelete', function(){
 	Route::get('/createpagecounter', 'PagesController@create_page_counter');
 
 
-	Route::get('/form', function(){
-		return view('form');
-	});
+	// Route::get('/form', function(){
+	// 	return view('form');
+	// });
+
+
+	Route::get('/form', 'PagesController@load_form_page');
