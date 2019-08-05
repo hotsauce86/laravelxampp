@@ -57,6 +57,9 @@ class PostController extends Controller
 
 	public function quick_fill_post(){
 
+
+
+		//nevermind, i put it in routes directly
 	}
 }
 
