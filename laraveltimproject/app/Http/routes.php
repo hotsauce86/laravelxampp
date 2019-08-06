@@ -82,11 +82,12 @@ Route::get('/basicinsert', function(){
 
 });
 
+	Route::get('/create', 'PostController@create');
 
-Route::get('/create', function(){
-	#uses Post.php Protected Fillable to allow writing
-	// Post::create(['title'=>'the create method', 'body'=>'some blah blah blanc ah oui oui ez enerph?']);
-});
+// Route::get('/create', function(){
+// 	#uses Post.php Protected Fillable to allow writing
+// 	// Post::create(['title'=>'the create method', 'body'=>'some blah blah blanc ah oui oui ez enerph?']);
+// });
 
 Route::get('/insert', function(){
 	DB::insert('insert into posts(title, content) values(?,?)', ['Php with laravel', 'some stuff goes here but hwat']);
@@ -184,3 +185,12 @@ Route::get('/forcedelete', function(){
 
 
 	Route::get('/form', 'PagesController@load_form_page');
+
+
+
+	/*
+		CRUD application
+
+
+	*/
+

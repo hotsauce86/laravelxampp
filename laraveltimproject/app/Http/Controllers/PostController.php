@@ -10,8 +10,18 @@ use Illuminate\Foundation\Auth\Access\AuthorizesResources;
 
 class PostController extends Controller
 {
-	public function create($id){
-		return "i am being creative";
+	// public function create($id){
+	// 	return "i am being creative";
+	// }
+
+	public function create(){
+		return view('posts.index');
+	}
+
+
+	public function store(Request $request){
+
+		Post::create($request->all());
 	}
 
 	public function index($id){
