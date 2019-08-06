@@ -24,8 +24,16 @@ class PostController extends Controller
 		Post::create($request->all());
 	}
 
-	public function index($id){
-		return "its working now : " . $id;
+	// public function index($id){
+	// 	return "its working now : " . $id;
+	// }
+
+	public function index(){
+		$posts = Post::all();
+
+		//index is not set to receive these vars yet
+		//might be an issue, blame the dev (oh wait thats me)
+		return view('posts.index', compact('posts'))
 	}
 
 	public function show($id){
