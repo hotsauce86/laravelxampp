@@ -33,7 +33,7 @@ class PostController extends Controller
 
 		//index is not set to receive these vars yet
 		//might be an issue, blame the dev (oh wait thats me)
-		return view('posts.index', compact('posts'))
+		return view('posts.index', compact('posts'));
 	}
 
 	public function show($id){
