@@ -18,6 +18,10 @@ use App\Score;
 
 Route::get('/', 'PagesController@home');
 
+	Route::get('/tim', function(){
+		return view('tim');
+	});
+
 
 /*
 |----------------------------------------------
@@ -44,45 +48,35 @@ Route::get('/read', 'PostController@read_post');
 // });
 
 
-Route::get('/find', function(){
+// Route::get('/find', function(){
+// 	$posts = Post::all();
+// 	foreach ($posts as $post) {
+// 		# code...
+// 		return $post->title;
+// 	}
+// 	// $posts = Post::where('id',3)->orderBy('id', 'desc')->take(1)-get();
+// 	// return $posts;
+
+// 	// $posts = Post::findOrFail(2);
+// 	// return $posts;
+
+// 	// $posts = Post::where('users_count', '<', 50)->firstOrFail();
+// });
 
 
-	$posts = Post::all();
-	foreach ($posts as $post) {
-		# code...
-		return $post->title;
-	}
+// Route::get('/basicinsert', function(){
 
-
-	// $posts = Post::where('id',3)->orderBy('id', 'desc')->take(1)-get();
-	// return $posts;
-
-	// $posts = Post::findOrFail(2);
-	// return $posts;
-
-	// $posts = Post::where('users_count', '<', 50)->firstOrFail();
-});
-
-
-Route::get('/basicinsert', function(){
-
-	#adds to table 'Post'
-	// $post = new Post;
-	// $post->title = 'New title insert1';
-	// $post->body ='awesome this is so cool wow 5 stars thumbs up errebody!';
-	// $post->save;
-
-
-	#updates values of object at id 2 in 'Post' Table
-	$post = Post::find(2);
-	$post->title = 'New title insert1';
-	$post->body ='awesome this is so cool wow 5 stars thumbs up errebody!';
-	$post->save();
-
-
-});
-
-	Route::get('/create', 'PostController@create');
+// 	#adds to table 'Post'
+// 	// $post = new Post;
+// 	// $post->title = 'New title insert1';
+// 	// $post->body ='awesome this is so cool wow 5 stars thumbs up errebody!';
+// 	// $post->save;
+// 	#updates values of object at id 2 in 'Post' Table
+// 	$post = Post::find(2);
+// 	$post->title = 'New title insert1';
+// 	$post->body ='awesome this is so cool wow 5 stars thumbs up errebody!';
+// 	$post->save();
+// });
 
 // Route::get('/create', function(){
 // 	#uses Post.php Protected Fillable to allow writing
@@ -104,39 +98,35 @@ Route::get('/quickfillposts', function(){
 	DB::insert('insert into posts(title, content) values(?,?)', ['just in case it was not', 'enough']);
 });
 
-Route::get('/update', function(){
-		// Post::where('id', 2)->where('is_admin', 0)->update(['title
-		// 	'=>'NEW PHP TITLE', 'content'=>'iluvdogsorwhatever']);
-});
+// Route::get('/update', function(){
+// 		// Post::where('id', 2)->where('is_admin', 0)->update(['title
+// 		// 	'=>'NEW PHP TITLE', 'content'=>'iluvdogsorwhatever']);
+// });
 
-Route::get('/delete', function(){
-	// $post = Post::find(1);
-	// $post->delete();
-	// Post::destroy(1);
-	// Post::destroy([4,5]);
-	// Post::where('is_admin', 0)->delete();
+// Route::get('/delete', function(){
+// 	// $post = Post::find(1);
+// 	// $post->delete();
+// 	// Post::destroy(1);
+// 	// Post::destroy([4,5]);
+// 	// Post::where('is_admin', 0)->delete();
 
-});
+// });
 
-Route::get('/softdelete', function(){
- 	
- 	//Post::find(2)->delete();
+// Route::get('/softdelete', function(){
+//  	//Post::find(2)->delete();
+//  	#or a read soft delete
+//  	//$post = Post::onlyTrashed()->where('id', 1)->get();
+//  	return $post;
+// });
 
- 	#or a read soft delete
-
- 	//$post = Post::onlyTrashed()->where('id', 1)->get();
-
- 	return $post;
-});
-
-Route::get('/restore', function(){
-	//Post::withTrashed()->where('is_admin', 0)->restore();
-});
+// Route::get('/restore', function(){
+// 	//Post::withTrashed()->where('is_admin', 0)->restore();
+// });
 
 
-Route::get('/forcedelete', function(){
-	//Post::withTrashed()->where('is_admin', 0)->forceDelete();
-});
+// Route::get('/forcedelete', function(){
+// 	//Post::withTrashed()->where('is_admin', 0)->forceDelete();
+// });
 
 
 
@@ -149,9 +139,9 @@ Route::get('/forcedelete', function(){
 |---------------------------------------------
 */
 
-	Route::get('/user/post/{id}', function($id){
-		return User::find($id)->post;
-	});
+	// Route::get('/user/post/{id}', function($id){
+	// 	return User::find($id)->post;
+	// });
 	
 
 
@@ -167,31 +157,23 @@ Route::get('/forcedelete', function(){
 	Specian projects
 |---------------------------------------------
 */
-
-
-	Route::get('/tim', function(){
-		return view('tim');
-	});
-
-
 	Route::get('/scoreboard', 'ScoreboardController@retrieve_scores');
 
 	Route::get('/createpagecounter', 'PagesController@create_page_counter');
-
-
-	// Route::get('/form', function(){
-	// 	return view('form');
-	// });
-
 
 	Route::get('/form', 'PagesController@load_form_page');
 
 
 
 	/*
+	|---------------------------------------------
 		CRUD application
 
-
+|---------------------------------------------
 	*/
 
-	Route::get('/posts', 'PostController@store');
+	Route::get('/posts', 'PostController@edit');
+
+
+
+Route::controller('posts', 'PostController');
