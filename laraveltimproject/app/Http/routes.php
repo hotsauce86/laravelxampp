@@ -154,7 +154,7 @@ Route::get('/quickfillposts', function(){
 
 /*
 |---------------------------------------------
-	Specian projects
+	Special projects
 |---------------------------------------------
 */
 	Route::get('/scoreboard', 'ScoreboardController@retrieve_scores');
@@ -177,3 +177,16 @@ Route::get('/quickfillposts', function(){
 	Route::post('/posts/store', 'PostController@store');
 
 	Route::get('/posts/create', 'PostController@create');
+
+
+/*
+
+PROJECT CONTROLLER RELATED ROUTES
+
+*/
+
+Route::get('/projects', 'ProjectsController@index');
+
+Route::get('/projects/create', 'ProjectsController@create');
+
+Route::post('/projects/store', 'ProjectsController@store');
