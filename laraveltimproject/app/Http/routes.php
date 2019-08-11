@@ -173,7 +173,3 @@ Route::get('/quickfillposts', function(){
 	*/
 
 	Route::get('/posts', 'PostController@edit');
-
-
-
-Route::controller('posts', 'PostController');
