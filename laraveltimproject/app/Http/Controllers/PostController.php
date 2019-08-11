@@ -29,11 +29,12 @@ class PostController extends Controller
 	// }
 
 	public function index(){
-		$posts = Post::all();
+		//$posts = Post::all();
 
 		//index is not set to receive these vars yet
 		//might be an issue, blame the dev (oh wait thats me)
-		return view('posts.index', compact('posts'));
+		//return view('posts.index', compact('posts'));
+		return view('posts.index');
 	}
 
 	// public function show($id){

@@ -168,8 +168,12 @@ Route::get('/quickfillposts', function(){
 	/*
 	|---------------------------------------------
 		CRUD application
-
+		using folder 'posts'
 |---------------------------------------------
 	*/
 
-	Route::get('/posts', 'PostController@edit');
+	Route::get('/posts', 'PostController@index');
+
+	Route::post('/posts/store', 'PostController@store');
+
+	Route::get('/posts/create', 'PostController@create');
