@@ -10,9 +10,9 @@
 
 <form method="post" action="/posts">
 
-	<input type="text" name="title" placeholder="enter something">
+	<input type="text" name="title" placeholder="enter something" value="{{$post->title}}">
 
 	<input type="submit" name="submit">
 
 </form>
-@endsection
+@stop

@@ -194,4 +194,4 @@ Route::get('/forcedelete', function(){
 
 	*/
 
-	Route::get('/posts', 'PostController@store')
+	Route::get('/posts', 'PostController@store');
