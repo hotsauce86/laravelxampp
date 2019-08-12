@@ -183,10 +183,31 @@ Route::get('/quickfillposts', function(){
 
 PROJECT CONTROLLER RELATED ROUTES
 
+
+GET (index),
+GET (create),
+GET (show),
+POST (store),
+GET (edit),
+PATCH (update),
+DELETE (destroy)
+
 */
 
-Route::get('/projects', 'ProjectsController@index');
 
-Route::get('/projects/create', 'ProjectsController@create');
 
-Route::post('/projects/store', 'ProjectsController@store');
+Route::resource('projects', 'ProjectsController');
+
+// Route::get('/projects', 'ProjectsController@index');
+
+// Route::get('/projects/create', 'ProjectsController@create');
+
+// Route::get('/projects/{project}', 'ProjectsController@show');
+
+// Route::post('/projects', 'ProjectsController@store');
+
+// Route::get('/projects/{project}/edit', 'ProjectsController@edit');
+
+// Route::patch('/projects/{project}', "ProjectsController@update");
+
+// Route::delete('/projects/{project}', 'ProjectsController@destroy');
