@@ -1,4 +1,4 @@
-@extend('layout')
+@extends('layouts.test')
 
 
 
@@ -36,4 +36,4 @@
 
 </form>
 
-@endsection
+@stop
