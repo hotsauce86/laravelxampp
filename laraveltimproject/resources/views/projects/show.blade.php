@@ -13,6 +13,10 @@
 		{{ $project->description }}
 	</p>
 
+	<p>
+		ID: {{ $project->id }}
+	</p>
+
 
 	</div>
 

@@ -28,15 +28,15 @@ class ProjectsController extends Controller
 	}
 
 
-	// public function show($id){
- //        $project =Project::findOrFail($id);
-	// 	return view('projects.show', compact('project'));
-	// }
-
-	public function show(Project $project){
-        return $project;
+	public function show($id){
+        $project =Project::findOrFail($id);
 		return view('projects.show', compact('project'));
 	}
+
+	// public function show(Project $project){
+ //        return $project;
+	// 	return view('projects.show', compact('project'));
+	// }
 
 
 	public function edit($id){
@@ -74,10 +74,24 @@ class ProjectsController extends Controller
 
 	public function store(){
 
-		Project::create([
-			'title' => request('title'),
-			'description' => request('description')
-		]);
+		// request()->validate([
+
+		// 	'title'=>'required',
+		// 	'description'=>'required'
+		// ]);
+		Project::create(request()->validate([
+				'title' => ['required', 'min:3'],
+				'description' => ['required', 'min:3']
+
+		]));
+			
+
+		// Project::create([
+		// 	'title' => request('title'),
+		// 	'description' => request('description')
+		// ]);
+
+
 
 		// $project = new Project();
 		// $project->title = request('title');

@@ -13,12 +13,12 @@
 		
 		{{csrf_field()}}
 		<div>
-			<input type="text" name="title" placeholder=" project title">
+			<input type="text" name="title" placeholder=" project title" required>
 		</div>
 
 
 		<div>
-			<textarea name="description" placeholder="project description">
+			<textarea name="description" placeholder="project description" required>
 				
 			</textarea>
 		</div>

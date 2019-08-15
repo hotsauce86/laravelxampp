@@ -10,7 +10,6 @@
 
 
 	<div class="container">
-		<p>hello</p>
 		@yield('content')
 	</div>
 
