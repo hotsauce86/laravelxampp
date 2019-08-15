@@ -9,11 +9,14 @@
 		this is the index page
 	</p>
 
-
+	<ul>
 	@foreach($projects as $project)
 
-	<li>{{$project->title}}</li>
+	<a href="/projects/{{ $project->id }}">
+		<li>{{$project->title}}</li>
+	</a>
+	
 	@endforeach
-
+</ul>
 </body>
 </html>

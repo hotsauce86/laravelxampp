@@ -4,9 +4,8 @@
 	<title></title>
 </head>
 <body>
-
 	<p>
-		this is the store page
+		hi, uh nothing here 
 	</p>
 
 </body>

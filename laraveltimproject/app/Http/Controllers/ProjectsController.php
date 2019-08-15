@@ -28,9 +28,14 @@ class ProjectsController extends Controller
 	}
 
 
-	public function show(){
+	// public function show($id){
+ //        $project =Project::findOrFail($id);
+	// 	return view('projects.show', compact('project'));
+	// }
 
-
+	public function show(Project $project){
+        return $project;
+		return view('projects.show', compact('project'));
 	}
 
 
@@ -57,20 +62,27 @@ class ProjectsController extends Controller
 		 return redirect('/projects');
 	}
 
-	public function destroy(){
+	public function destroy(Project $project){
 
+		//dd('hello');
+
+		//Project::findOrFail($id)->delete();
+		$project->delete();
+		return redirect('/projects');
 	}
 
 
 	public function store(){
 
+		Project::create([
+			'title' => request('title'),
+			'description' => request('description')
+		]);
 
-		$project = new Project();
-
-		$project->title = request('title');
-		$project->description = request('description');
-
-		$project->save();
+		// $project = new Project();
+		// $project->title = request('title');
+		// $project->description = request('description');
+		// $project->save();
 
 		return redirect('/projects');
 		//return request()->all();
