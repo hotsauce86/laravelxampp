@@ -21,4 +21,6 @@ class ProjectTasksController extends Controller
 
     	return back();
     }
+
+    public function store()
 }
