@@ -34,7 +34,7 @@
 	</div>
 
 	<form method="POST" action="/projects/{{ $project->id }}/tasks" class="box">
-		{!! Form::open(['method' => 'patch']) !!}
+		{{method_field('PATCH')}}
 		{{ csrf_field() }}
 		 <div class="field">
 		 	<label class="label" for="description">

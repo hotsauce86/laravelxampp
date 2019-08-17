@@ -28,7 +28,7 @@ class ProjectTasksController extends Controller
 
     	Task::create([
     		'project_id' => $project->id,
-    		'decription' => request('description')
+    		'description' => request('description')
 
     	]);
 

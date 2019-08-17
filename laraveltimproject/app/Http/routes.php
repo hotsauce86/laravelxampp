@@ -18,36 +18,26 @@ use App\Score;
 
 Route::get('/', 'PagesController@home');
 
-	Route::get('/tim', function(){
-		return view('tim');
-	});
-
-
+Route::get('/tim', function(){
+	return view('tim');
+});
 /*
 |----------------------------------------------
 				ROUTES USING A CONTROLLER!!!
 |----------------------------------------------
 */
-
 //Route::get('/post/{id}', 'PostController@index');
 //Route::resource('posts', 'PostController');
-
 Route::get('/contact', 'PostController@contact');
-
 Route::get('/about', 'PostController@about');
-
 Route::get('/post/{id}/{name}/{password}', 'PostController@show_post');
-
 Route::get('/read', 'PostController@read_post');
 // Route::get('/read', function(){
 // 	$results = DB::select('select * from posts where id = ?', [2]);
 // 	foreach ($results as $post) {
 // 		return $post->title;
-// 	}
-	
+// 	}	
 // });
-
-
 // Route::get('/find', function(){
 // 	$posts = Post::all();
 // 	foreach ($posts as $post) {
@@ -56,16 +46,11 @@ Route::get('/read', 'PostController@read_post');
 // 	}
 // 	// $posts = Post::where('id',3)->orderBy('id', 'desc')->take(1)-get();
 // 	// return $posts;
-
 // 	// $posts = Post::findOrFail(2);
 // 	// return $posts;
-
 // 	// $posts = Post::where('users_count', '<', 50)->firstOrFail();
 // });
-
-
 // Route::get('/basicinsert', function(){
-
 // 	#adds to table 'Post'
 // 	// $post = new Post;
 // 	// $post->title = 'New title insert1';
@@ -77,16 +62,13 @@ Route::get('/read', 'PostController@read_post');
 // 	$post->body ='awesome this is so cool wow 5 stars thumbs up errebody!';
 // 	$post->save();
 // });
-
 // Route::get('/create', function(){
 // 	#uses Post.php Protected Fillable to allow writing
 // 	// Post::create(['title'=>'the create method', 'body'=>'some blah blah blanc ah oui oui ez enerph?']);
 // });
-
 Route::get('/insert', function(){
 	DB::insert('insert into posts(title, content) values(?,?)', ['Php with laravel', 'some stuff goes here but hwat']);
 });
-
 Route::get('/quickfillposts', function(){
 	DB::insert('insert into posts(title, content) values(?,?)', ['Php with laravel', 'some stuff goes here but hwat']);
 	DB::insert('insert into posts(title, content) values(?,?)', ['Wubba lubba', ' dab dab']);
@@ -102,69 +84,44 @@ Route::get('/quickfillposts', function(){
 // 		// Post::where('id', 2)->where('is_admin', 0)->update(['title
 // 		// 	'=>'NEW PHP TITLE', 'content'=>'iluvdogsorwhatever']);
 // });
-
 // Route::get('/delete', function(){
 // 	// $post = Post::find(1);
 // 	// $post->delete();
 // 	// Post::destroy(1);
 // 	// Post::destroy([4,5]);
 // 	// Post::where('is_admin', 0)->delete();
-
 // });
-
 // Route::get('/softdelete', function(){
 //  	//Post::find(2)->delete();
 //  	#or a read soft delete
 //  	//$post = Post::onlyTrashed()->where('id', 1)->get();
 //  	return $post;
 // });
-
 // Route::get('/restore', function(){
 // 	//Post::withTrashed()->where('is_admin', 0)->restore();
 // });
-
-
 // Route::get('/forcedelete', function(){
 // 	//Post::withTrashed()->where('is_admin', 0)->forceDelete();
 // });
-
-
-
-
-
-
 /*
 |---------------------------------------------
 	ELOQUENT relationships
 |---------------------------------------------
 */
-
 	// Route::get('/user/post/{id}', function($id){
 	// 	return User::find($id)->post;
 	// });
-	
-
-
 	// Route::get('/scoreboard', function(){
 	// 	return view('scoreboard');
 	// });
-
-
-
-
 /*
 |---------------------------------------------
 	Special projects
 |---------------------------------------------
 */
 	Route::get('/scoreboard', 'ScoreboardController@retrieve_scores');
-
 	Route::get('/createpagecounter', 'PagesController@create_page_counter');
-
 	Route::get('/form', 'PagesController@load_form_page');
-
-
-
 	/*
 	|---------------------------------------------
 		CRUD application
@@ -173,9 +130,7 @@ Route::get('/quickfillposts', function(){
 	*/
 
 	Route::get('/posts', 'PostController@index');
-
 	Route::post('/posts/store', 'PostController@store');
-
 	Route::get('/posts/create', 'PostController@create');
 
 
@@ -194,23 +149,14 @@ DELETE (destroy)
 
 */
 
-
-
 Route::resource('projects', 'ProjectsController');
-Route::resource('tasks', 'ProjectTasksController');
 
 // Route::get('/projects', 'ProjectsController@index');
-
 // Route::get('/projects/create', 'ProjectsController@create');
-
 // Route::get('/projects/{project}', 'ProjectsController@show');
-
 // Route::post('/projects', 'ProjectsController@store');
-
 // Route::get('/projects/{project}/edit', 'ProjectsController@edit');
-
 // Route::patch('/projects/{project}', "ProjectsController@update");
-
 // Route::delete('/projects/{project}', 'ProjectsController@destroy');
 
 
