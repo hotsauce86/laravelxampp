@@ -8,6 +8,8 @@ use App\Http\Requests;
 
 use App\Task;
 
+use App\Project;
+
 class ProjectTasksController extends Controller
 {
     //
@@ -22,5 +24,15 @@ class ProjectTasksController extends Controller
     	return back();
     }
 
-    public function store()
+    public function store(Project $project){
+
+    	Task::create([
+    		'project_id' => $project->id,
+    		'decription' => request('description')
+
+    	]);
+
+    	return back();
+
+    }
 }

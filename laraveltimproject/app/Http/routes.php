@@ -197,6 +197,7 @@ DELETE (destroy)
 
 
 Route::resource('projects', 'ProjectsController');
+Route::resource('tasks', 'ProjectTasksController');
 
 // Route::get('/projects', 'ProjectsController@index');
 
