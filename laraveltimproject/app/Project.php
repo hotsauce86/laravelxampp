@@ -20,11 +20,14 @@ class Project extends Model
 
 	public function addTask($description){
 
-		 	Task::create([
-    		'project_id' => $this->id,
-    		'description' => $description
 
-    	]);
+		$this->tasks()->create(compact('description'));
+
+		 // Task::create([
+   //  		'project_id' => $this->id,
+   //  		'description' => $description
+
+   //  	]);
 	}
     
 }
