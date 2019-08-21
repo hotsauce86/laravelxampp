@@ -13,11 +13,20 @@
 
 		<p>ID: {{ $project->id }}</p>
 
+
+
+
+
+
+
+
+
+
 		@if ($project->tasks->count())
 			<div>
 				@foreach ($project->tasks as $task)
 					<div>
-						<form method="POST" action="/projects/{{ $project->id }}">
+						<form method="POST" action="/tasks/{task}">
 								{{method_field('PATCH')}}
 								{{ csrf_field() }}
 							<label class="checkbox" for="completed">
@@ -31,7 +40,16 @@
 				@endforeach
 			</div>
 		@endif
+
+
 	</div>
+
+
+
+
+
+
+
 
 	<form method="POST" action="/projects/{{ $project->id }}/tasks" class="box">
 	
