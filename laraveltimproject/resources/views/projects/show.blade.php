@@ -30,7 +30,7 @@
 								{{method_field('PATCH')}}
 								{{ csrf_field() }}
 							<label class="checkbox" for="completed">
-								<input type="checkbox" name="completed" onChange="this.form.submit()" {{ $task->completed ? 'checked' : ''}}>
+								<input type="checkbox" name="completed">
 								{{ $task->description }}
 							</label>
 						</form>
