@@ -17,9 +17,11 @@ class ProjectTasksController extends Controller
     	//dd('hello');
     	//dd($task);
 
-    	$task->update([
-    		'completed' => request()->has('completed')
-    	]);
+    	// $task->update([
+    	// 	'completed' => request()->has('completed')
+    	// ]);
+
+    	$task->complete(request()->has('completed'));
 
     	return back();
     }
