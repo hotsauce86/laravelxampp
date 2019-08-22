@@ -13,17 +13,17 @@ use App\Project;
 class ProjectTasksController extends Controller
 {
     //
-    public function update(){
-    	dd('hello');
+    public function update(Task $task){
+    	//dd('hello');
     	//dd($task);
 
-    	// $task->update([
-    	// 	'completed' => request()->has('completed')
-    	// ]);
+    	$task->update([
+    		'completed' => request()->has('completed')
+    	]);
 
-    	// $task->complete(request()->has('completed'));
+    	 //$task->complete(request()->has('completed'));
 
-    	//return back();
+    	return back();
     }
 
     public function store(Project $project){
