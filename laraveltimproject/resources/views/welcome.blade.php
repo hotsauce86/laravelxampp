@@ -119,8 +119,8 @@
             <?php endforeach; ?>
                 
                 <!--div class="title">Laravel 5</div-->
-                <div class="title">TIM'S LARAVEL PROJECT (V 0.4.2)</div>
-                <p>(this is the welcome blade)</p>
+                <div class="title">TIM'S LARAVEL PROJECT (V 0.5.0)</div>
+                <!--p>(this is the welcome blade)</p>
 
                 <p>
                     <a href="/contact">Contact</a> us to learn more
@@ -132,7 +132,7 @@
 
                 <p>
                     <a href="/testlayout">testlayout</a>    
-                </p>
+                </p-->
             </div>
         </div>
     </body>
