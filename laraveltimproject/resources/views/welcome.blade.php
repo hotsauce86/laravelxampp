@@ -68,7 +68,7 @@
                     background-color: red;
                 }
                  3%{
-                    background-color: black;
+                    background-color: white;
                 }
                 4%{
                     background-color: teal;
@@ -80,7 +80,7 @@
                     background-color: yellow;
                 }
                 7%{
-                    background-color: black;
+                    background-color: white;
                 }
                 8%{
                     background-color: pink;
